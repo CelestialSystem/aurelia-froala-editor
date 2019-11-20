@@ -1,6 +1,5 @@
 import {inject, customElement, bindable} from 'aurelia-framework';
 import {ObserverLocator} from "aurelia-binding";
-
 import {Config} from './froala-editor-config';
 
 // Import Froala Editor
