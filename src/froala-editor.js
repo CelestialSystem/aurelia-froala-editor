@@ -33,6 +33,7 @@ export class FroalaEditor1 {
 		// Get element.
 		const editorSelector = this.config.iframe ? 'textarea' : 'div';
 		let editor = this
+		
 		// Check if editor isn't already initialized.
 		if (this.editor != null) { return; }
 
@@ -47,14 +48,14 @@ export class FroalaEditor1 {
 					})
 			];
 			
-			this.config.events = {
-			    contentChanged: function contentChanged(e) {
+		this.config.events = {
+			contentChanged: function contentChanged(e) {
 			        return editor.value = this.html.get();
-			    },
-			    blur: function blur(e) {
+			},
+			blur: function blur(e) {
 			        return editor.value = this.html.get();
-			    }
-			};
+			}
+		};
 
 		// Initialize editor.
 		this.editor = new FroalaEditor(this.element, Object.assign({}, this.config), () => {
@@ -74,8 +75,6 @@ export class FroalaEditor1 {
 					}
 				}
 			}
-			//this.editor.events.on('blur', (e) => this.value = this.editor.html.get());
-			//this.editor.events.on('contentChanged', (e) => this.value = this.editor.html.get());
 		});
 	}
 
