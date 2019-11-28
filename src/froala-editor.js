@@ -46,7 +46,8 @@ export class FroalaEditor1 {
 						}
 					})
 			];
-			
+		
+		// Will be registered when editor is initialized.
 		this.config.events = {
 			contentChanged: function contentChanged(e) {
 			        return editor.value = this.html.get();

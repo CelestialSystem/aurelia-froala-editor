@@ -45,7 +45,6 @@ function _initializerWarningHelper(descriptor, context) {
 
 import { inject, customElement, bindable } from 'aurelia-framework';
 import { ObserverLocator } from "aurelia-binding";
-
 import { Config } from './froala-editor-config';
 
 import FroalaEditor from 'froala-editor';
